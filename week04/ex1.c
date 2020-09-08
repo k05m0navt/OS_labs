@@ -1,21 +1,20 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <errno.h>
 #include <unistd.h>
-#include <sys/types.h>
 
 int     main()
 {
-    int     n;
-    pid_t   p;
+    pid_t   n;
 
-    n = 0;
-    p = fork();
-    if (p == 0)
-        printf("Hello from child %d\n", getpid()-n);
-    else if (p > 0)
-        printf("Hello from parent %d\n", getpid()-n);
+    n = fork();
+    if (n == 0)
+        printf("Hello from child [PID - %d]\n", getpid());
+    else if (n > 0)
+        printf("Hello from parent [PID - %d]\n", getpid());
     else
         printf("Unable to create child process.\n");
     return (0);
 }
+
+/*  After each run of the program(10 times for our task) fork() creates an additional processes, 
+ *  so we have one Parrent and one Child process
+ */
