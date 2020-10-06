@@ -1,0 +1,4 @@
+8KB = 2^13 bits
+length = 16 bits
+Entries = 2^(16 - 13) = 2^3 = 8
+Answer: 8 entries
