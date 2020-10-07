@@ -17,6 +17,7 @@ int main()
     {
         ptr = (int *)malloc(mb);
         memset(ptr, 0, mb);
+        getrusage(RUSAGE_SELF, &usage);
         printf("%ld\n", usage.ru_maxrss);
         sleep(1);
     }
