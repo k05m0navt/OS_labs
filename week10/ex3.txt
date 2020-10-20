@@ -1,0 +1,32 @@
+[k05m0navt@k05m0navt week10]$ vim _ex3.txt
+[k05m0navt@k05m0navt week10]$ chmod +x _ex3.txt
+[k05m0navt@k05m0navt week10]$ ls -l
+total 8
+-rw-r--r-- 3 k05m0navt k05m0navt   0 окт 20 12:51 _ex1_1.txt
+-rw-r--r-- 3 k05m0navt k05m0navt   0 окт 20 12:51 _ex1_2.txt
+-rw-r--r-- 3 k05m0navt k05m0navt   0 окт 20 12:51 _ex1.txt
+-rw-r--r-- 1 k05m0navt k05m0navt  57 окт 20 12:56 ex1.txt
+-rw-r--r-- 1 k05m0navt k05m0navt 725 окт 20 13:04 ex2.txt
+-rwxr-xr-x 1 k05m0navt k05m0navt   0 окт 20 13:05 _ex3.txt
+[k05m0navt@k05m0navt week10]$ chmod uo=+rwx _ex3.txt
+[k05m0navt@k05m0navt week10]$ ls -l
+total 8
+-rw-r--r-- 3 k05m0navt k05m0navt   0 окт 20 12:51 _ex1_1.txt
+-rw-r--r-- 3 k05m0navt k05m0navt   0 окт 20 12:51 _ex1_2.txt
+-rw-r--r-- 3 k05m0navt k05m0navt   0 окт 20 12:51 _ex1.txt
+-rw-r--r-- 1 k05m0navt k05m0navt  57 окт 20 12:56 ex1.txt
+-rw-r--r-- 1 k05m0navt k05m0navt 725 окт 20 13:04 ex2.txt
+-rwxr-xrwx 1 k05m0navt k05m0navt   0 окт 20 13:05 _ex3.txt
+[k05m0navt@k05m0navt week10]$ chmod -R g=u _ex3.txt
+[k05m0navt@k05m0navt week10]$ ls -l
+total 8
+-rw-r--r-- 3 k05m0navt k05m0navt   0 окт 20 12:51 _ex1_1.txt
+-rw-r--r-- 3 k05m0navt k05m0navt   0 окт 20 12:51 _ex1_2.txt
+-rw-r--r-- 3 k05m0navt k05m0navt   0 окт 20 12:51 _ex1.txt
+-rw-r--r-- 1 k05m0navt k05m0navt  57 окт 20 12:56 ex1.txt
+-rw-r--r-- 1 k05m0navt k05m0navt 725 окт 20 13:04 ex2.txt
+-rwxrwxrwx 1 k05m0navt k05m0navt   0 окт 20 13:05 _ex3.txt
+
+660 - owner & group - r/w, other - nothing.
+775 - owner & group - r/w/e, other - r/e.
+777 - all - r/w/e.

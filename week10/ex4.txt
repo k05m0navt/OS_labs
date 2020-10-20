@@ -1,0 +1,13 @@
+[k05m0navt@k05m0navt week10]$ gcc ex4.c -o ex4
+[k05m0navt@k05m0navt week10]$ ./ex4 
+.:
+
+file1:
+link1
+
+file2:
+
+link1:
+file1
+
+..:

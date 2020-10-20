@@ -1,0 +1,14 @@
+[k05m0navt@k05m0navt week10]$ vim ../week01/file.txt
+[k05m0navt@k05m0navt week10]$ link ../week01/file.txt _ex2.txt
+[k05m0navt@k05m0navt week10]$ ls -li
+total 4
+20975206 -rw-r--r-- 3 k05m0navt k05m0navt  0 окт 20 12:51 _ex1_1.txt
+20975206 -rw-r--r-- 3 k05m0navt k05m0navt  0 окт 20 12:51 _ex1_2.txt
+20975206 -rw-r--r-- 3 k05m0navt k05m0navt  0 окт 20 12:51 _ex1.txt
+20975258 -rw-r--r-- 1 k05m0navt k05m0navt 57 окт 20 12:56 ex1.txt
+19403082 -rw-r--r-- 2 k05m0navt k05m0navt  0 окт 20 13:02 _ex2.txt
+[k05m0navt@k05m0navt week10]$ find .. -inum 19403082
+../week01/file.txt
+../week10/_ex2.txt
+[k05m0navt@k05m0navt week10]$ find .. -inum 19403082 -exec rm {} \;
+[k05m0navt@k05m0navt week10]$ find .. -inum 19403082
