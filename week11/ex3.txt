@@ -1,0 +1,3 @@
+When outputting to standard output using the C library's printf() function, the output is usually buffered.
+The buffer is not flushed until you output a newline, call fflush(stdout) or exit the program (not through calling _exit() though). 
+The standard output stream is by default line-buffered in this way when it's connected to a TTY.
